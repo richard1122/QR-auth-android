@@ -186,7 +186,7 @@ public class CameraTestActivity extends Activity
 				if (dataHelper.getUsernameListByRemote(remote).size() == 0) {
 					//If no user, toast it.
 					Toast.makeText(CameraTestActivity.this, "You haven't registered this website yet.", Toast.LENGTH_LONG).show();
-					return true;
+					return false;
 				}
 				
 				if (dataHelper.getUsernameListByRemote(remote).size() == 1) {
@@ -269,6 +269,15 @@ public class CameraTestActivity extends Activity
 						
 					} catch (Exception e) {
 						e.printStackTrace();
+						handler.post(new Runnable() {
+
+							@Override
+							public void run() {
+								Toast.makeText(CameraTestActivity.this, "Network connection failed!", Toast.LENGTH_LONG).show();
+								
+							}
+							
+						});
 					}
 				}
 			}).start();

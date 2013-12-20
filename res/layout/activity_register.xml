@@ -17,7 +17,7 @@
 	        android:id="@+id/register_edit_name"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
-	        android:hint="请输入一个名称" 
+	        android:hint="Please specify an item name." 
 	        />
 	</LinearLayout>
 	<LinearLayout
@@ -29,7 +29,7 @@
 	        android:layout_weight="1"
 	        android:layout_width="0dp"
 	        android:layout_height="wrap_content"
-	        android:text="用户名：" 
+	        android:text="username：" 
 	        />
 	    <TextView
 	        android:id="@+id/register_edit_user"
@@ -47,7 +47,7 @@
 	        android:layout_weight="1"
 	        android:layout_width="0dp"
 	        android:layout_height="wrap_content"
-	        android:text="验证网址：" 
+	        android:text="remote address：" 
 	        />
 	    <TextView
 	        android:id="@+id/register_edit_remote"
@@ -65,7 +65,7 @@
 	        android:layout_weight="1"
 	        android:layout_width="0dp"
 	        android:layout_height="wrap_content"
-	        android:text="验证密钥：" 
+	        android:text="key：" 
 	        />
 	    <TextView
 	        android:id="@+id/register_edit_key"
@@ -83,7 +83,7 @@
 		    android:id="@+id/register_edit_commit" 
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
-		    android:text="确定保存"
+		    android:text="save"
 		    />
 	</LinearLayout>
 </LinearLayout>

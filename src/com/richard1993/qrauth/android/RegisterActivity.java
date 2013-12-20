@@ -53,12 +53,12 @@ public class RegisterActivity extends Activity {
 			Editable name = registerEditNameEditText.getEditableText();
 			
 			if (name.length() < 1) {
-				Toast.makeText(RegisterActivity.this, "请输入一个名字", Toast.LENGTH_LONG).show();
+				Toast.makeText(RegisterActivity.this, "Please input an item name.", Toast.LENGTH_LONG).show();
 				return;
 			}
 			
 			if (dataHelper.register(username, remote, key, name.toString())) {
-				Toast.makeText(RegisterActivity.this, String.format("%s注册成功", name.toString()), Toast.LENGTH_LONG).show();
+				Toast.makeText(RegisterActivity.this, String.format("%s Registered successfully.", name.toString()), Toast.LENGTH_LONG).show();
 				finish();
 				return;
 			}
