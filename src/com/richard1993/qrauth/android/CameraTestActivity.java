@@ -209,6 +209,7 @@ public class CameraTestActivity extends Activity
     	if (dialogFragment != null)
     		dialogFragment.dismiss();
     	if (username != null) {
+    		Toast.makeText(CameraTestActivity.this, "An user selected and ready to send request to server, please wait.", Toast.LENGTH_LONG).show();
     		new Thread(new Runnable() {
 				@Override
 				public void run() {
