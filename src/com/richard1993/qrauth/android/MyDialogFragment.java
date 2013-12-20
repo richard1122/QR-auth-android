@@ -45,12 +45,6 @@ public class MyDialogFragment extends DialogFragment {
 		View view = inflater.inflate(R.layout.dialog_fragment_layout, null);
 		DataHelper dataHelper = new DataHelper(getActivity());
 		List<String> userList = dataHelper.getUsernameListByRemote(this.remote);
-		if (userList.size() == 0) {
-			//no userName.
-			Toast.makeText(getActivity(), "You haven't registered this website yet.", Toast.LENGTH_LONG).show();
-			getDialog().cancel();
-			return null;
-		}
 		
 		for (String string : userList) {
 			//Initial all users and binding click listener

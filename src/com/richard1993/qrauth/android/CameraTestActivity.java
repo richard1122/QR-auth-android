@@ -91,7 +91,6 @@ public class CameraTestActivity extends Activity
         mPreview = new CameraPreview(this, mCamera, previewCb, autoFocusCB);
         FrameLayout preview = (FrameLayout)findViewById(R.id.cameraPreview);
         preview.addView(mPreview);
-
     }
 
     public void onStop() {
@@ -183,6 +182,13 @@ public class CameraTestActivity extends Activity
 				String session = jsonObject.getString("session");
 
 				DataHelper dataHelper = new DataHelper(CameraTestActivity.this);
+				
+				if (dataHelper.getUsernameListByRemote(remote).size() == 0) {
+					//If no user, toast it.
+					Toast.makeText(CameraTestActivity.this, "You haven't registered this website yet.", Toast.LENGTH_LONG).show();
+					return true;
+				}
+				
 				if (dataHelper.getUsernameListByRemote(remote).size() == 1) {
 					//When only one user registered into this remote address, auto login.
 					onUsernameSelect(dataHelper.getUsernameListByRemote(remote).get(0), remote, session);
