@@ -275,7 +275,6 @@ public class CameraTestActivity extends Activity
 							@Override
 							public void run() {
 								Toast.makeText(CameraTestActivity.this, "Network connection failed!", Toast.LENGTH_LONG).show();
-								
 							}
 							
 						});
