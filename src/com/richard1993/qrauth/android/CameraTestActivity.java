@@ -6,14 +6,9 @@
  */
 package com.richard1993.qrauth.android;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TimeZone;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
@@ -27,7 +22,6 @@ import org.json.JSONObject;
 
 import com.richard1993.qrauth.android.CameraPreview;
 
-import android.R.layout;
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.Intent;
@@ -35,19 +29,12 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.FrameLayout;
-import android.widget.Button;
 import android.widget.Toast;
 import android.hardware.Camera;
 import android.hardware.Camera.PreviewCallback;
 import android.hardware.Camera.AutoFocusCallback;
-import android.hardware.Camera.Parameters;
 import android.hardware.Camera.Size;
-import android.widget.TextView;
-import android.graphics.ImageFormat;
 
 /* Import ZBar Class files */
 import net.sourceforge.zbar.ImageScanner;
