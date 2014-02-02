@@ -166,7 +166,7 @@ public class CameraTestActivity extends Activity
 			}
 			if (!jsonObject.isNull("session")) {
 				//login mode
-				String session = jsonObject.getString("session");
+				String session = jsonObject.getString("sid");
 
 				DataHelper dataHelper = new DataHelper(CameraTestActivity.this);
 				
@@ -207,7 +207,7 @@ public class CameraTestActivity extends Activity
 						
 						List<NameValuePair> params = new ArrayList<NameValuePair>();
 						params.add(new BasicNameValuePair("username", username));
-						params.add(new BasicNameValuePair("session", session));
+						params.add(new BasicNameValuePair("sid", session));
 						
 						long t = System.currentTimeMillis() / 1000 / 30;
 						
@@ -221,7 +221,6 @@ public class CameraTestActivity extends Activity
 					    }
 					    
 						params.add(new BasicNameValuePair("hash", sb.toString()));
-						params.add(new BasicNameValuePair("timestamp", String.valueOf(t)));
 						Log.i("", sb.toString());
 						
 						UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(params);
@@ -250,7 +249,7 @@ public class CameraTestActivity extends Activity
 										e.printStackTrace();
 									}
 								}
-								Toast.makeText(CameraTestActivity.this, "Unexpected errror happened", Toast.LENGTH_LONG).show();
+								Toast.makeText(CameraTestActivity.this, "Unexpected errror", Toast.LENGTH_LONG).show();
 								return;
 							}
 						});
